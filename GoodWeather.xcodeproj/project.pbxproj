@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		546D96C12E5027F100CF1A35 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 546D96C02E5027F100CF1A35 /* Secrets.xcconfig */; };
 		54C1220B2E4FEA7F00803511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C122022E4FEA7F00803511 /* AppDelegate.swift */; };
 		54C1220C2E4FEA7F00803511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C122092E4FEA7F00803511 /* SceneDelegate.swift */; };
 		54C1220D2E4FEA7F00803511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C122032E4FEA7F00803511 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		541BC7622E4FBCB600C3FC61 /* GoodWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		546D96C02E5027F100CF1A35 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		54C122022E4FEA7F00803511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C122032E4FEA7F00803511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54C122042E4FEA7F00803511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				54C122262E50026F00803511 /* Constants.swift */,
+				546D96C02E5027F100CF1A35 /* Secrets.xcconfig */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				54C1220D2E4FEA7F00803511 /* Assets.xcassets in Resources */,
 				54C122102E4FEA7F00803511 /* Main.storyboard in Resources */,
+				546D96C12E5027F100CF1A35 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +259,7 @@
 /* Begin XCBuildConfiguration section */
 		541BC7762E4FBCB700C3FC61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546D96C02E5027F100CF1A35 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -287,6 +292,7 @@
 		};
 		541BC7772E4FBCB700C3FC61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546D96C02E5027F100CF1A35 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
