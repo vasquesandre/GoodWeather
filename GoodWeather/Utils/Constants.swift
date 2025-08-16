@@ -12,7 +12,10 @@ struct Constants {
     
     struct Urls {
         static func urlForWeatherByCity(city: String) -> URL {
-            return URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city.escaped())&units=metric&appid=\(Constants.apiKey ?? "")")!
+            let userDefaults = UserDefaults.standard
+            let unit = (userDefaults.value(forKey: "unit") as? String) ?? "metric"
+            
+            return URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city.escaped())&units=\(unit)&appid=\(Constants.apiKey ?? "")")!
         }
     }
 }

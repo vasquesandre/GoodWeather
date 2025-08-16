@@ -56,7 +56,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GoodWeather" id="eDr-M0-nUj">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="omZ-wF-EWF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="omZ-wF-EWF">
+                            <connections>
+                                <segue destination="K7X-gb-QSJ" kind="showDetail" identifier="SettingsTableViewController" id="8At-IE-X8Z"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hZc-fe-Fy6">
                             <connections>
                                 <segue destination="VsJ-aq-xbe" kind="showDetail" identifier="AddWeatherCityViewController" id="s9v-Wv-6pg"/>
@@ -124,6 +128,41 @@
             </objects>
             <point key="canvasLocation" x="2602.290076335878" y="147.88732394366198"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="1j5-Fn-ltx">
+            <objects>
+                <tableViewController id="3zP-cj-89V" customClass="SettingsTableViewController" customModule="GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SK6-Rg-cWj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="Nb9-5F-nnE">
+                                <rect key="frame" x="0.0" y="50" width="393" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nb9-5F-nnE" id="oM3-mb-Fbo">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3zP-cj-89V" id="Jq4-gY-mDj"/>
+                            <outlet property="delegate" destination="3zP-cj-89V" id="9Ad-Sf-4sN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="Dis-sZ-S5Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4rz-vD-aiG">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="3zP-cj-89V" id="jvY-Yy-jVZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVP-mr-xb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="-587"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lyO-wJ-tjf">
             <objects>
@@ -159,13 +198,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXw-Z8-lgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675.5725190839694" y="147.88732394366198"/>
+            <point key="canvasLocation" x="1676" y="148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pzt-ZE-FMz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K7X-gb-QSJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jKL-2P-eof">
+                        <rect key="frame" x="0.0" y="118" width="393" height="106"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3zP-cj-89V" kind="relationship" relationship="rootViewController" id="sEb-IO-URq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBh-OC-6ZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-587"/>
         </scene>
     </scenes>
     <resources>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
